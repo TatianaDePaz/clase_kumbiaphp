@@ -1,0 +1,23 @@
+<?php echo view::content() ?>
+<h3>Listado de Profesores </h3>
+<table>
+  <thead>
+    <th>id</th>
+    <th>nombres</th>
+    <th>apellidos</th>
+    <th>especialidad</th>
+    <th>acciones</th>
+  </thead>
+  <?php foreach($listaProfesores->items as $item):?>
+   <td><?php echo $item->id ?></td>
+      <td><?php echo $item->nombres ?></td>
+      <td><?php echo $item->apellidos ?></td>
+      <td><?php echo $item->especialidad?></td>
+      <td>
+       <?php echo html::LinkAction("edit/$item->id/",'Editar','class="btn green"')?>
+        <?php echo html::LinkAction("del/$item->id/",'Borrar','class="btn red"')?>
+      </td>
+    </tr>
+   <?php endforeach; ?>
+</table>
+  

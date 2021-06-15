@@ -1,0 +1,32 @@
+<h1>Formulario de registro</h1>
+<div class="row">
+    <?php View::content() ?>
+    <h3>Formulario de Registro de Alumnos</h3>
+    <?= Form::open(); ?>
+        <div class="row">
+            <div class="col s6">
+                <label for="Nombres">Nombres
+                <?= Form::text('alumnos.nombres'); ?></label>
+            </div>
+            <div class="col s6">
+                <label for="Apellidos">Apellidos
+                <?= Form::text('alumnos.apellidos'); ?></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s6">
+                <label for="Edad">Edad
+                <?= Form::text('alumnos.edad');?></label>
+            </div>
+            <div class="col s6">
+                <label for="Numero">Numero
+                <?= Form::text('alumnos.numero'); ?></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col s12">
+                <?= Form::submit('Guardar',"class='btn teal'"); ?>
+            </div>
+        </div>
+    <?= Form::close(); ?>
+</div>
